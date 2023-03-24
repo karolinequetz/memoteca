@@ -1,0 +1,22 @@
+{
+  "pensamentos": [
+    {
+      "id": 1,
+      "conteudo": "Passo informações para o componente filho",
+      "autoria": "Componente pai",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 2,
+      "conteudo": "Minha propriedade é decorada com @Input()",
+      "autoria": "Componente filho",
+      "modelo": "modelo2"
+    },
+    {
+      "id": 3,
+      "conteudo": "Angular é o melhor",
+      "autoria": "Dev Alura",
+      "modelo": "modelo3"
+    }
+  ]
+}
