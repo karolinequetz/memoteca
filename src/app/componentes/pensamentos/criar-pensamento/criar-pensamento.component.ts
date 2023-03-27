@@ -46,4 +46,12 @@ export class CriarPensamentoComponent {
   cancelar() {
     this.router.navigate(['/listarPensamento']);
   }
+
+  habilitarBotao(): string {
+    if (this.formulario.valid) {
+      return 'botao';
+    } else {
+      return 'botao__desabilitado';
+    }
+  }
 }
