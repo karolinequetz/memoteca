@@ -1,27 +1,42 @@
-# Memoteca
+# Memoteca - Aplicação para anotações
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este projeto foi desenvolvido durante o curso da Alura
+ https://cursos.alura.com.br/formacao-angular-14. 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Índice
 
-## Build
+- [Visão geral](#visão-geral)
+  - [O projeto](#o-projeto)
+  - [Screenshot](#screenshot)
+- [Processo de desenvolvimento](#desenvolvimento-processo)
+  - [Construído com](#construído-com)
+- [Codificado por](#coded-by)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Visão geral
 
-## Running unit tests
+### O projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Listar anotações
+- Criar anotações
+- Excluir e editar anotações
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Captura de tela
 
-## Further help
+![](./alura1.png)
+![](./alura2.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Processo de desenvolvimento
+
+### Construído com
+
+- Angular CLI
+
+## Codificado por
+
+- LinkedIn - [@karolinequetz](https://www.linkedin.com/in/karolinequetz)
+
