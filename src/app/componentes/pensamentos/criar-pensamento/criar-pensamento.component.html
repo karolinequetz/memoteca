@@ -15,6 +15,7 @@
       placeholder="Digite o pensamento"
 
     />
+    <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors?.['required'] && formulario.get('autoria')?.touched">Pensamento é obrigatório!</div>
     <label for="autoria">Autoria ou fonte</label>
     <input
       type="textarea"
@@ -24,6 +25,8 @@
       placeholder="Digite a autoria ou fonte"
 
     />
+    <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['required'] && formulario.get('conteudo')?.touched">Autoria é obrigatória!</div>
+    <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['minlength']">Autoria precisa ter no mínimo 3 caracteres!</div>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
       <div class="radio-modelo">
