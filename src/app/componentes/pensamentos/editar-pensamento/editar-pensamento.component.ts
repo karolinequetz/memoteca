@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PensamentoService } from '../pensamento.service';
 
-
 @Component({
   selector: 'app-editar-pensamento',
   templateUrl: './editar-pensamento.component.html',
@@ -36,6 +35,7 @@ export class EditarPensamentoComponent {
           Validators.compose([Validators.required, Validators.minLength(3)]),
         ],
         modelo: [pensamento.modelo],
+        favorito: [pensamento.favorito],
       });
     });
   }

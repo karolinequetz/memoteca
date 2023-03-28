@@ -11,7 +11,7 @@ export class ListarPensamentoComponent {
   listaPensamentos: Pensamento[] = [];
   paginaAtual: number = 1;
   haMaisPensamentos: boolean = true;
-  filtro: string = 'Testando filtro';
+  filtro: string = '';
 
   constructor(private service: PensamentoService) {}
 

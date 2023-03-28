@@ -30,9 +30,14 @@ export class CriarPensamentoComponent {
       ],
       autoria: [
         '',
-        Validators.compose([Validators.required, Validators.minLength(3), minusculoValidator]),
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(3),
+          minusculoValidator,
+        ]),
       ],
       modelo: ['modelo1'],
+      favorito: [false],
     });
   }
   criarPensamento() {
