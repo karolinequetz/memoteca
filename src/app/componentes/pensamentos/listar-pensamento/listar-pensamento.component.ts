@@ -43,4 +43,14 @@ export class ListarPensamentoComponent {
         this.listaPensamentos = listaPensamentos;
       });
   }
+
+  listarFavorito() {
+    this.haMaisPensamentos = true;
+    this.paginaAtual = 1;
+    this.service
+      .listarPensamentosFavoritos(this.paginaAtual, this.filtro)
+      .subscribe((listaPensamentosFavoritos) => {
+        this.listaPensamentos = listaPensamentosFavoritos;
+      });
+  }
 }
