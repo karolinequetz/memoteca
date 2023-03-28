@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PensamentoService } from '../pensamento.service';
-import { Pensamento } from '../pensamento/pensamento';
+
 
 @Component({
   selector: 'app-editar-pensamento',
@@ -11,13 +11,6 @@ import { Pensamento } from '../pensamento/pensamento';
 })
 export class EditarPensamentoComponent {
   formulario!: FormGroup;
-
-  pensamento: Pensamento = {
-    id: 0,
-    conteudo: '',
-    autoria: '',
-    modelo: '',
-  };
 
   constructor(
     private service: PensamentoService,
@@ -29,26 +22,26 @@ export class EditarPensamentoComponent {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
-      this.pensamento = pensamento;
-    });
-
-    this.formulario = this.formBuilder.group({
-      conteudo: [
-        '',
-        Validators.compose([
-          Validators.required,
-          Validators.pattern(/(.|\s)*\S(.|\s)*/),
-        ]),
-      ],
-      autoria: [
-        '',
-        Validators.compose([Validators.required, Validators.minLength(3)]),
-      ],
+      this.formulario = this.formBuilder.group({
+        id: [pensamento.id],
+        conteudo: [
+          pensamento.conteudo,
+          Validators.compose([
+            Validators.required,
+            Validators.pattern(/(.|\s)*\S(.|\s)*/),
+          ]),
+        ],
+        autoria: [
+          pensamento.autoria,
+          Validators.compose([Validators.required, Validators.minLength(3)]),
+        ],
+        modelo: [pensamento.modelo],
+      });
     });
   }
 
   editarPensamento() {
-    this.service.editar(this.pensamento).subscribe(() => {
+    this.service.editar(this.formulario.value).subscribe(() => {
       this.router.navigate(['/listarPensamento']);
     });
   }
